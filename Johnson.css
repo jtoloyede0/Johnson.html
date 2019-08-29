@@ -1,0 +1,71 @@
+.container {
+  display: grid;
+  max-width: 70%;
+  position: relative;
+  margin: auto;
+  grid-template-areas: "header header img"
+    					"nav nav nav"
+    					"left left right"
+    					"footer footer footer";
+  grid-template-columns: 1fr 1fr 1.5fr;
+  grid-template-rows: 0.3fr 0.2fr 0.7fr 2fr;
+}
+
+h1, h2, .contact {
+  font-family: monospace;
+  text-align: center;
+}
+
+header {
+  background-color: dodgerblue;
+  grid-area: header;
+}
+
+img {
+	border-radius: 100%;
+	background-color: dodgerblue;
+}
+
+
+nav {
+  background-color: beige;
+  grid-area: nav;
+}
+
+.left {
+  background-color: beige;
+  grid-area: left;
+
+}
+
+.right {
+  background-color: beige;
+  grid-area: right;
+}
+
+footer {
+  background-color: dodgerblue;
+  grid-area: footer;
+}
+
+.img {
+	background-color: dodgerblue;
+	grid-area: img;
+}
+
+p, .abc {
+	margin-left: 20px;
+	text-align: justify;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: coral;
+}
+
+a:active {
+	color: darkorange;
+}
