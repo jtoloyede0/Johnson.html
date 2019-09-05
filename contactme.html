@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Contact Me</title>
+</head>
+
+<body>
+	<form action="https://formspree.io/iluvmili3007@gmail.com" method="post" name="contactMe" onsubmit="return CONTACTME()">
+		<h2>Contact Me</h2>
+		<p>Name:<br><input type="text"  min="4" required placeholder="enter name" name="Name" autofocus></p>
+		<p>Email:<br><input type="email" required placeholder="enter email" name="Email"></p>
+		<p>Title: <br><input type="text" placeholder="message title" name="Tittle">  </p>
+		<p>Message: <br><textarea type="text" min="20" placeholder="type your message here..."name="Message"></textarea></p>
+		<input type="submit" value="Send" name="Submit">
+	</form>
+
+
+	<script> 
+function CONTACTME()								 
+{ 
+	var name = document.forms["contactMe"]["Name"];			 
+	var email = document.forms["contactMe"]["EMail"]; 
+	var title = document.forms["contactMe"]["Title"]; 
+	var message = document.forms["contactMe"]["Message"]; 
+	 
+
+	if (name.value == "")								 
+	{ 
+		window.alert("Please enter your name."); 
+		name.focus(); 
+		return false; 
+	}
+	
+	if (email.value == "")								 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf("@", 0) < 0)				 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf(".", 0) < 0)				 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (title.value == "")						 
+	{ 
+		window.alert("Please enter message title."); 
+		title.focus(); 
+		return false; 
+	} 
+
+	
+	if (message.value =="")				 
+	{ 
+		alert("Please enter your message."); 
+		message.focus(); 
+		return false; 
+	} 
+
+	return true; 
+}
+	</script> 
+
+</body>
+</html>
